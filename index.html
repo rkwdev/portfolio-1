@@ -2,14 +2,129 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Website Title -->
     <title>Personal Portfolio</title>
+
+    <!-- All Style Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/superslides.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+    <!-- ===================================
+        Navigation Menu
+    ========================================  -->
+    <header>
+        <nav class="navbar navbar-expand-lg nav-menu">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand text-light text-uppercase">
+                    <img src="images/logo.png" alt="logo">
+                    <!-- <img src="images/ex-logo/2.png" alt="logo"> -->
+                    <!-- <h1>Md Rokun</h1> -->
+                </a>
 
+                <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                </button>
+
+                <div class="collapse navbar-collapse nav-wrapper" id="myNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item nav-active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link m-1 menu-item">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ===================================
+        End of Navigation Menu
+    ========================================  -->
+
+
+    <!-- ===================================
+        Slider
+    ========================================  -->
+    <div id="slides">
+
+        <div class="overlay"></div>
+
+        <div class="slides-container">
+            <!-- <img src="images/slide1.jpg" alt="">
+            <img src="images/slide2.jpeg" alt="">
+            <img src="images/slide3.jpeg" alt=""> -->
+
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+        </div>
+
+        <div class="slider-text">
+            <h4 class="text-uppercase name">MD Rokun</h4>
+            <!-- <p class="display-4 typed"></p> -->
+            <h2 class="typed"></h2>
+            <button type="button" class="btn btn-outline-light">Hire Me</button>
+
+            <div class="social-icons mt-4">
+                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- ===================================
+        End of Slider
+    ========================================  -->
+
+
+    <!-- ===================================
+        About Me
+    ========================================  -->
+    <section id="about">
+
+    </section>
+    <!-- ===================================
+        End of About Me
+    ========================================  -->
+
+    <!-- ===================================
+        All Script Files
+    ========================================  -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

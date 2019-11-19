@@ -1,7 +1,9 @@
 /* =====================================
     Global CSS
 ======================================== */
-
+.section {
+    padding: 6.25rem 0;
+}
 /* End of Global CSS */
 
 
@@ -16,7 +18,7 @@
     width: 100%;
     height: 60px;
     top: 30px;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .navbar-brand {
@@ -212,6 +214,124 @@
 ======================================== */
 
 
+/* =====================================
+    About
+======================================== */
+.section-title h1 {
+    font-weight: 400;
+    color: #22A7F0;
+    position: relative;
+}
+
+.section-title h1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #22A7F0;
+    width: 40%;
+    height: 6px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.section-title__text {
+    background: #fff;
+    position: relative;
+    padding: 0 26px;
+    z-index: 1;
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    width: 86%;
+    height: 94%;
+    border: 12px solid #22A7F0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.about-img img {
+    max-width: 100%;
+    box-shadow: 0 0 6px rgba(34, 168, 240, 0.6);
+    padding: 1px;
+    border-radius: 2px;
+}
+
+.about-detail {
+    padding-left: 3rem;
+}
+
+.about-detail h4 {
+    font-weight: 400;
+}
+
+.about-detail h4 strong {
+    font-weight: 500;
+}
+
+.about-detail p {
+    line-height: 1.7;
+    margin: 1.8rem 0;
+}
+
+.about-detail__links {
+    margin-top: 2.5rem;
+}
+
+.btn-download {
+    background-color: #22A7F0;
+    color: #fff;
+    transition: all .2s;
+    animation: glow 1.8s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 1px 0 5px #22A7F0;
+    }
+    25% {
+        box-shadow: 0px 0 8px #22A7F0;
+    }
+    50% {
+        box-shadow: 0px 0 15px #22A7F0;
+    }
+    75% {
+        box-shadow: 0px 0 8px #22A7F0;
+    }
+    100% {
+        box-shadow: 0px 0 5px #22A7F0;
+    }
+}
+
+.btn-download:hover {
+    background-color: #0d8ed3;
+    color: #fff;
+    animation: none;
+}
+
+.btn-hire {
+    border-color: #22A7F0;
+    color: #22A7F0;
+    transition: all .2s;
+}
+
+.btn-hire:hover {
+    background-color: #0d8ed3;
+    color: #fff;
+}
+/* =====================================
+    End of About
+======================================== */
+
+
 
 /* =====================================
     Media Queries
@@ -256,8 +376,30 @@
     .slides-pagination {
         display: none;
     }
+
+    /* About Section */
+    .section-title h1::before {
+        width: 52%;
+    }
+
+    .about-detail {
+        padding-left: 0;
+        padding-top: 3rem;
+    }
+    /* End of About Section */
 }
 /* End of Max width "991px" */
+
+
+/* ===== Max width "767px" ===== */
+@media only screen and (max-width: 767px) {
+    /* About Section */
+    .section-title h1::before {
+        width: 70%;
+    }
+    /* End of About Section */
+}
+/* End of Max width "767px" */
 
 
 /* ===== Max width "575px" ===== */
@@ -302,6 +444,23 @@
     .social-icons {
         margin-top: 1.25rem!important;
     }
+    /* About Section */
+    .section-title__text {
+        padding: 0 14px;
+    }
+    
+    .about-img {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-detail {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* End of About Section */
 }
 /* End of Max width "575px" */
 
@@ -341,6 +500,16 @@
     .transform-x .bar-3 {
         transform: rotate(135deg) scaleX(1.15) translate(-5px, 5px);
     }
+
+    /* About Section */
+    .section-title__text {
+        padding: 0 14px;
+    }
+
+    .section-title h1::before {
+        width: 80%;
+    }
+    /* End of About Section */
 }
 /* End of Max width "425px" */
 

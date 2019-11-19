@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var position = $(this).scrollTop();
-        if (position >= 15) {
+        if (position >= 29) {
             $('.nav-menu').addClass('custom-nav')
         } else {
             $('.nav-menu').removeClass('custom-nav')

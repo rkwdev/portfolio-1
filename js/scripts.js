@@ -24,5 +24,48 @@ $(document).ready(function () {
         } else {
             $('.nav-menu').removeClass('custom-nav')
         }
-    })
+    });
 })
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: 500,
+        items: 4,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    })
+
+
+
+    $(window).scroll(function () {
+        var position = $(this).scrollTop();
+        if (position >= 860) {
+            $('.skills-section__skill__chart').easyPieChart({
+                easing: 'easeInOut',
+                barColor: '#fff',
+                trackColor: 'rgba(0,0,0,.3)',
+                scaleColor: '#fff',
+                scaleLength: 5,
+                lineWidth: 6,
+                size: 152,
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent))
+                }
+            });
+        }
+    });
+
+});

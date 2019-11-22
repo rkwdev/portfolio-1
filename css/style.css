@@ -1,3 +1,8 @@
+.color {
+    color: #22A7F0; /* 1st used color */
+    color: #0a3d62; /* 2nd used color */
+}
+
 /* =====================================
     Global CSS
 ======================================== */
@@ -220,7 +225,7 @@
 .section-title h1 {
     font-weight: 400;
     color: #22A7F0;
-    position: relative;
+    /* position: relative; */
 }
 
 .section-title h1::before {
@@ -260,9 +265,7 @@
 
 .about-img img {
     max-width: 100%;
-    box-shadow: 0 0 6px rgba(34, 168, 240, 0.6);
-    padding: 1px;
-    border-radius: 2px;
+    box-shadow: 0 0 0px 12px rgba(34, 168, 240, 0.1);
 }
 
 .about-detail {
@@ -293,6 +296,39 @@
     animation: glow 1.8s linear infinite;
 }
 
+.btn-download i.fa {
+    font-size: 13px !important;
+    animation: top-to-bottom 1.8s linear infinite;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    position: relative;
+    padding-left: 3px;
+    opacity: 0;
+}
+
+@keyframes top-to-bottom {
+    0% {
+        top: -3px;
+        opacity: 0;
+    }
+    25% {
+        top: -3px;
+        opacity: .7;
+    }
+    50% {
+        top: 0;
+        opacity: .9;
+    }
+    75% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -2px;
+        opacity: 0;
+    }
+}
+
 @keyframes glow {
     0% {
         box-shadow: 1px 0 5px #22A7F0;
@@ -317,6 +353,11 @@
     animation: none;
 }
 
+.btn-download:hover i.fa {
+    animation: none;
+    opacity: 1;
+}
+
 .btn-hire {
     border-color: #22A7F0;
     color: #22A7F0;
@@ -324,11 +365,77 @@
 }
 
 .btn-hire:hover {
-    background-color: #0d8ed3;
+    background-color: #22A7F0;
     color: #fff;
 }
 /* =====================================
     End of About
+======================================== */
+
+
+/* =====================================
+    Skills
+======================================== */
+.skills-section {
+    background-color: #0a3d62;
+    color: #fff;
+}
+
+.skills-section .section-title h1 {
+    color: #fff;
+}
+
+.skills-section .section-title h1::before {
+    background: #fff;
+}
+
+.skills-section .section-title__text {
+    background: #0a3d62;
+}
+
+.skills-section .owl-carousel {
+    cursor: grab;
+}
+
+.skills-section .owl-carousel:active {
+    cursor: grabbing;
+}
+
+.skills-section .skills-section__skill {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.skills-section .skills-section__skill h4 {
+    margin-top: 0.50rem;
+    font-weight: 400;
+}
+
+.skills-section .skills-section__skill .skills-section__skill__chart {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills-section .skills-section__skill .skills-section__skill__chart .skills-section__skill__chart__percent {
+    line-height: 152px;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.skills-section .skills-section__skill .skills-section__skill__chart .skills-section__skill__chart__percent:after {
+    content: "%";
+}
+
+.skills-section .skills-section__skill .skills-section__skill__chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* =====================================
+    End of Skills
 ======================================== */
 
 

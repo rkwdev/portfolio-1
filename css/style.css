@@ -6,8 +6,14 @@
 /* =====================================
     Global CSS
 ======================================== */
+html,
+body {
+    color: #333;
+}
+
 .section {
     padding: 6.25rem 0;
+    background-color: #f8f9fa;
 }
 /* End of Global CSS */
 
@@ -48,8 +54,10 @@
     transition: color .3s;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.menu-item:focus {
     color: #22A7F0;
+    outline: none;
 }
 
 .nav-active {
@@ -241,7 +249,7 @@
 }
 
 .section-title__text {
-    background: #fff;
+    background-color: #f8f9fa;
     position: relative;
     padding: 0 26px;
     z-index: 1;
@@ -401,17 +409,17 @@
     cursor: grabbing;
 }
 
-.skills-section .skills-section__skill {
+.skills-section__skill {
     text-align: center;
     margin-left: 10px;
 }
 
-.skills-section .skills-section__skill h4 {
-    margin-top: 0.50rem;
+.skills-section__skill h4 {
+    margin-top: 1rem;
     font-weight: 400;
 }
 
-.skills-section .skills-section__skill .skills-section__skill__chart {
+.skills-section__chart {
     position: relative;
     width: 152px;
     height: 152px;
@@ -419,23 +427,141 @@
     text-align: center;
 }
 
-.skills-section .skills-section__skill .skills-section__skill__chart .skills-section__skill__chart__percent {
+.skills-section__chart__percent {
     line-height: 152px;
     display: inline-block;
     font-size: 2rem;
 }
 
-.skills-section .skills-section__skill .skills-section__skill__chart .skills-section__skill__chart__percent:after {
+.skills-section__chart__percent:after {
     content: "%";
 }
 
-.skills-section .skills-section__skill .skills-section__skill__chart canvas {
+.skills-section__chart canvas {
     position: absolute;
     top: 0;
     left: 0;
 }
 /* =====================================
     End of Skills
+======================================== */
+
+
+/* =====================================
+    Works
+======================================== */
+.works-section__filter ul {
+    list-style: none;
+    padding: 0;
+}
+
+.works-section__filter li {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #22A7F0;
+    color: #22A7F0;
+    border-radius: 3px;
+    padding: 5px 14px;
+    margin-right: 14px;
+    transition: all 300ms;
+}
+
+.works-section__filter li:hover {
+    background: #22A7F0;
+    color: #fff;
+}
+
+.filter-active {
+    background: #22A7F0;
+    color: #fff !important;
+}
+
+.filter-container {
+    
+}
+
+.filtr-item {
+    
+}
+
+.works-section__work {
+    width: 303px !important;
+    height: 250px !important;
+    overflow: hidden !important;
+    /* border: none !important; */
+    /* border: 1px solid gold; */
+}
+
+.works-section__work img {
+    max-width: 100%;
+    height: auto;
+}
+
+.works-section__icons {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.works-section__icons a {
+    background-color: rgba(34, 168, 240, 0.8);
+    display: inline-block;
+    padding: .25em .5em;
+    margin: 0 .25em;
+    position: relative;
+    transition: all 300ms ease-out;
+}
+
+.works-section__icons a:hover {
+    background-color: #22A7F0;
+}
+
+.works-section__icons i {
+    color: #fff;
+    font-size: 1.125rem;
+}
+
+.works-section__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 300ms ease-out;
+}
+
+.works-section__work:hover .works-section__overlay {
+    opacity: 1;
+}
+
+.works-section__view {
+    float: left;
+    left: -200px;
+    opacity: 0;
+}
+
+.works-section__link {
+    float: right;
+    right: -200px;
+    opacity: 0;
+}
+
+.works-section__work:hover .works-section__view {
+    left: 0;
+    opacity: 1;
+}
+
+.works-section__work:hover .works-section__link {
+    right: 0;
+    opacity: 1;
+}
+/* =====================================
+    End of Works
 ======================================== */
 
 

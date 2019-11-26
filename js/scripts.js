@@ -53,7 +53,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var position = $(this).scrollTop();
         if (position >= 860) {
-            $('.skills-section__skill__chart').easyPieChart({
+            $('.skills-section__chart').easyPieChart({
                 easing: 'easeInOut',
                 barColor: '#fff',
                 trackColor: 'rgba(0,0,0,.3)',
@@ -67,5 +67,13 @@ $(document).ready(function () {
             });
         }
     });
+
+    $(".controller li").click(function () {
+        // $(this).addClass('filter-active').siblings("li").removeClass('filter-active');
+        $(".controller li").removeClass("filter-active");
+        $(this).addClass("filter-active");
+    })
+
+    var filterizr = $('.filter-container').filterizr({});
 
 });

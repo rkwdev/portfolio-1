@@ -30,7 +30,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        autoplay: 500,
+        autoplay: true,
+        smartSpeed: 1000,
         items: 4,
         responsive: {
             0: {
@@ -46,8 +47,7 @@ $(document).ready(function () {
                 items: 4
             }
         }
-    })
-
+    });
 
 
     $(window).scroll(function () {
@@ -69,7 +69,6 @@ $(document).ready(function () {
     });
 
     $(".controller li").click(function () {
-        // $(this).addClass('filter-active').siblings("li").removeClass('filter-active');
         $(".controller li").removeClass("filter-active");
         $(this).addClass("filter-active");
     })
@@ -77,3 +76,28 @@ $(document).ready(function () {
     var filterizr = $('.filter-container').filterizr({});
 
 });
+
+
+$('.testimonials-section__carousel').owlCarousel({
+    loop: true,
+    // nav: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    items: 1,
+    responsive: {
+        992: {
+            items: 1
+        }
+    }
+});
+
+var testimonialOwl = $('.testimonials-section__carousel');
+testimonialOwl.owlCarousel();
+// Go to the next item
+$('.testimonials-section__owl-next').click(function () {
+    testimonialOwl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.testimonials-section__owl-prev').click(function () {
+    testimonialOwl.trigger('prev.owl.carousel', [300]);
+})

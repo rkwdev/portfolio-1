@@ -609,6 +609,69 @@ body {
 ======================================== */
 
 
+/* =====================================
+    Testimonial
+======================================== */
+.testimonials-section {
+    background-color: #0a3d62;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section img {
+    width: 130px !important;
+    height: 130px !important;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonials-section__skewed {
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skew(0, -25deg);
+}
+
+.testimonials-section__owl-nav {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.testimonials-section__owl-prev,
+.testimonials-section__owl-next {
+    color: rgba(10, 61, 98, 0.3) !important;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.testimonials-section__owl-prev:hover,
+.testimonials-section__owl-next:hover {
+    color: rgba(10, 61, 98, 0.7) !important;
+}
+
+.testimonials-section__owl-prev {
+    float: left;
+    transform: translateX(-125px);
+}
+
+.testimonials-section__owl-next {
+    float: right;
+    transform: translateX(125px);
+}
+/* =====================================
+    End of Testimonial
+======================================== */
+
+
 
 /* =====================================
     Media Queries

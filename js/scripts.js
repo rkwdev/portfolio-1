@@ -73,7 +73,9 @@ $(document).ready(function () {
         $(this).addClass("filter-active");
     })
 
-    var filterizr = $('.filter-container').filterizr({});
+    $('.filter-container').filterizr({
+        layout: 'sameWidth'
+    });
 
 });
 

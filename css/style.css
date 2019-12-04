@@ -453,6 +453,8 @@ body {
 .works-section__filter ul {
     list-style: none;
     padding: 0;
+    /* border: 1px solid gold; */
+    text-align: center;
 }
 
 .works-section__filter li {
@@ -461,8 +463,10 @@ body {
     border: 1px solid #22A7F0;
     color: #22A7F0;
     border-radius: 3px;
-    padding: 5px 14px;
-    margin-right: 14px;
+    /* padding: 5px 14px; */
+    padding: .25em .7em;
+    /* margin: 0 14px; */
+    margin: 0 .5em;
     transition: all 300ms;
 }
 
@@ -477,7 +481,7 @@ body {
 }
 
 .filter-container {
-    
+    /* border: 1px solid gold; */
 }
 
 .filtr-item {
@@ -485,11 +489,12 @@ body {
 }
 
 .works-section__work {
-    width: 303px !important;
-    height: 250px !important;
+    /* width: 303px !important;
+    height: 250px !important; */
     overflow: hidden !important;
     /* border: none !important; */
     /* border: 1px solid gold; */
+    margin-bottom: 1.875rem;
 }
 
 .works-section__work img {

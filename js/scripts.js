@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     var typed = new Typed('.typed', {
-        strings: ['Full-Stack Web Developer', 'Front-End Developer', 'UI/UX Expert', 'JavaScript Lover'],
+        strings: ['Frontend Developer', 'WordPress Developer', 'UI/UX Expert'],
         typeSpeed: 70,
         loop: true,
         startDelay: 1000,

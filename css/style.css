@@ -87,7 +87,8 @@ body {
 .custom-nav {
     position: fixed;
     top: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 0px 1px 4px 0px rgba(34, 168, 240, 1);
 }
 
 .custom-nav .navbar-brand {
@@ -255,11 +256,11 @@ body {
     z-index: 1;
 }
 
-.about-img {
+.about__img {
     position: relative;
 }
 
-.about-img::before {
+.about__img::before {
     content: "";
     position: absolute;
     top: -24px;
@@ -271,40 +272,40 @@ body {
     border-right-color: transparent;
 }
 
-.about-img img {
+.about__img img {
     max-width: 100%;
     box-shadow: 0 0 0px 12px rgba(34, 168, 240, 0.1);
 }
 
-.about-detail {
+.about__detail {
     padding-left: 3rem;
 }
 
-.about-detail h4 {
+.about__detail h4 {
     font-weight: 400;
 }
 
-.about-detail h4 strong {
+.about__detail h4 strong {
     font-weight: 500;
 }
 
-.about-detail p {
+.about__detail p {
     line-height: 1.7;
     margin: 1.8rem 0;
 }
 
-.about-detail__links {
+.about__detail-links {
     margin-top: 2.5rem;
 }
 
-.btn-download {
+.about__detail-links .btn--download {
     background-color: #22A7F0;
     color: #fff;
     transition: all .2s;
     animation: glow 1.8s linear infinite;
 }
 
-.btn-download i.fa {
+.about__detail-links .btn--download i.fa {
     font-size: 13px !important;
     animation: top-to-bottom 1.8s linear infinite;
     animation-fill-mode: forwards;
@@ -355,24 +356,24 @@ body {
     }
 }
 
-.btn-download:hover {
+.about__detail-links .btn--download:hover {
     background-color: #0d8ed3;
     color: #fff;
     animation: none;
 }
 
-.btn-download:hover i.fa {
+.about__detail-links .btn--download:hover i.fa {
     animation: none;
     opacity: 1;
 }
 
-.btn-hire {
+.about__detail-links .btn--hire {
     border-color: #22A7F0;
     color: #22A7F0;
     transition: all .2s;
 }
 
-.btn-hire:hover {
+.about__detail-links .btn--hire:hover {
     background-color: #22A7F0;
     color: #fff;
 }
@@ -823,7 +824,7 @@ body {
         width: 52%;
     }
 
-    .about-detail {
+    .about__detail {
         padding-left: 0;
         padding-top: 3rem;
     }
@@ -900,13 +901,13 @@ body {
         padding: 0 14px;
     }
     
-    .about-img {
+    .about__img {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .about-detail {
+    .about__detail {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -961,6 +962,23 @@ body {
         width: 80%;
     }
     /* End of About Section */
+
+    .about__detail-links {
+        margin-top: 0;
+    }
+    
+    .about__detail-links .btn--download {
+        margin-top: 1.5rem;
+    }
+    
+    .about__detail-links .btn--hire {
+        margin-top: 1.5rem;
+    }
+
+    .works-section__filter li {
+        padding: .2em 0.5em;
+        margin: 0 .25em;
+}
 }
 /* End of Max width "425px" */
 

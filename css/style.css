@@ -8,14 +8,163 @@
 ======================================== */
 html,
 body {
-    color: #333;
+    color: #343a40;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .section {
     padding: 6.25rem 0;
     background-color: #f8f9fa;
 }
-/* End of Global CSS */
+
+.loader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.loader__img {
+    width: 100%;
+    height: 100%;
+    background: url('../images/page-loader.gif') center center no-repeat;
+}
+/* =====================================
+    End of Global CSS
+======================================== */
+
+
+/* =====================================
+    Animations
+======================================== */
+.animate-heading h1::before {
+    animation-name: animate-heading;
+    animation-fill-mode: forwards;
+    animation-duration: 800ms;
+}
+
+@keyframes animate-heading {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 8.2em;
+    }
+    75% {
+        width: 7.8em;
+    }
+    100% {
+        width: 8em;
+    }
+}
+
+.move-from-right {
+    animation-name: move-from-right;
+    animation-duration: 2000ms;
+}
+
+@keyframes move-from-right {
+    0% {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.move-from-left {
+    animation-name: move-from-left;
+    animation-duration: 2000ms;
+}
+
+@keyframes move-from-left {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.move-from-bottom {
+    animation-name: move-from-bottom;
+    animation-duration: 2000ms;
+}
+
+@keyframes move-from-bottom {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.scale-down {
+    animation-name: scale-down;
+    animation-duration: 2000ms;
+}
+
+@keyframes scale-down {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.img-border-anim::before {
+    animation-name: img-border-anim;
+    animation-duration: 1000ms;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img-border-anim {
+    0% {
+        width: 0;
+        height: 0;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    50% {
+        width: 90%;
+        height: 100%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    75% {
+        width: 80%;
+        height: 89%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    100% {
+        width: 86%;
+        height: 94%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+}
+/* =====================================
+    End of Animations
+======================================== */
 
 
 /* =====================================
@@ -25,7 +174,7 @@ body {
     background-color: rgba(0, 0, 0, .5);
     color: #fff;
     position: absolute;
-    z-index: 9999;
+    z-index: 15;
     width: 100%;
     height: 60px;
     top: 30px;
@@ -154,7 +303,7 @@ body {
 .slider-text {
     position: absolute;
     color: #fff;
-    z-index: 999;
+    z-index: 10;
     top: 50%;
     right: 10%;
     width: 80%;
@@ -281,7 +430,8 @@ body {
     left: 50%;
     top: 50%;
     background: #22A7F0;
-    width: 8em;
+    /* width: 8em; */
+    width: 0;
     height: .15em;
     border-radius: 20px;
     transform: translate(-50%, -50%);
@@ -303,16 +453,16 @@ body {
     position: absolute;
     top: -24px;
     left: -24px;
-    width: 86%;
-    height: 94%;
-    border: 12px solid #22A7F0;
+    /* width: 86%;
+    height: 94%; */
+    border: 14px solid transparent;
     border-bottom-color: transparent;
     border-right-color: transparent;
 }
 
 .about__img img {
     max-width: 100%;
-    box-shadow: 0 0 0px 12px rgba(34, 168, 240, 0.1);
+    box-shadow: 0 0 0px 10px rgba(34, 168, 240, 0.03);
 }
 
 .about__detail {
@@ -796,6 +946,10 @@ body {
     letter-spacing: 1px;
     color: #fff;
     font-weight: 400;
+}
+
+.contact .card a {
+    color: #fff;
 }
 /* =====================================
     End of Contact

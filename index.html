@@ -18,16 +18,34 @@
     <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="home">
+
+    <!-- ===================================
+        Page Loader
+    ========================================  -->
+    <div class="loader">
+        <div class="loader__img"></div>
+    </div>
+    <!-- ===================================
+        End of Page Loader
+    ========================================  -->
+
+
     <!-- ===================================
         Navigation Menu
     ========================================  -->
     <header>
         <nav class="navbar navbar-expand-lg nav-menu">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand text-light text-uppercase">
+                <a href="#home" class="navbar-brand text-light text-uppercase">
                     <!-- <img src="images/logo.png" alt="logo"> -->
                     <!-- <img src="images/ex-logo/2.png" alt="logo"> -->
                     <h1>portfolio</h1>
@@ -42,25 +60,25 @@
                 <div class="collapse navbar-collapse nav-wrapper" id="myNavbar">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item nav-active">Home</a>
+                            <a href="#home" class="nav-link m-1 menu-item nav-active">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">About</a>
+                            <a href="#about" class="nav-link m-1 menu-item">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">Skills</a>
+                            <a href="#skills" class="nav-link m-1 menu-item">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">Works</a>
+                            <a href="#works" class="nav-link m-1 menu-item">Works</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">Pricing</a>
+                            <a href="#pricing" class="nav-link m-1 menu-item">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">Testimonials</a>
+                            <a href="#testimonials" class="nav-link m-1 menu-item">Testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link m-1 menu-item">Contact</a>
+                            <a href="#contact" class="nav-link m-1 menu-item">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -87,7 +105,11 @@
 
         <div class="slider-text">
             <h4 class="text-uppercase name">MD Rokun</h4>
-            <h2 class="typed"></h2>
+            <h2 class="typed" data-text="
+                Frontend Developer,
+                WordPress Developer,
+                UI/UX Expert
+            "></h2>
             <a href="#" class="btn btn-outline-light btn--hire">Hire Me</a>
 
             <div class="social-icons mt-4">
@@ -439,7 +461,7 @@
     <!-- ===================================
         Price
     ========================================  -->
-    <section id="price" class="price-section section">
+    <section id="pricing" class="price-section section">
 
         <div class="container">
 
@@ -600,9 +622,38 @@
                 </div>
             </div>
 
-            <div class="row mt-4 justify-content-between">
+            <div class="row mt-4 text-center">
+                <div class="col-md-4 mb-4">
+                    <div id="contact-card-1" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Address</h5>
+                            <p class="card-text">Your Street Address</p>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="col-lg-6 pr-lg-5">
+                <div class="col-md-4 mb-4">
+                    <div id="contact-card-2" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="far fa-envelope"></i> Email</h5>
+                            <a href="mailto:youremail@email.com" class="card-text">youremail@email.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div id="contact-card-3" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-mobile-alt"></i> Phone</h5>
+                            <a href="callto:555-5555-55555" class="card-text">555-5555-55555</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-form" class="row mt-4 justify-content-between">
+
+                <div class="col-lg-6 pr-lg-4">
                     <form>
 
                         <div class="form-group pb-4">
@@ -627,35 +678,29 @@
                     </form>
                 </div>
 
-                <div class="col-lg-6 pl-lg-5 mt-lg-0 mt-5">
-                    <div class="row text-center mt-2">
-                        <div class="col-sm-12 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Address</h5>
-                                    <p class="card-text">Your Street Address</p>
-                                </div>
-                            </div>
+                <div class="col-lg-6 pl-lg-4 mt-lg-2 mt-5">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="397" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 397px;
+                                width: 600px;
+                                opacity: .8;
+                            }
 
-                        <div class="col-sm-12 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="far fa-envelope"></i> Email</h5>
-                                    <p class="card-text">youremail@email.com</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-mobile-alt"></i> Phone</h5>
-                                    <p class="card-text">555 5555 55555</p>
-                                </div>
-                            </div>
-                        </div>
-
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 397px;
+                                width: 600px;
+                            }
+                        </style>
                     </div>
                 </div>
 

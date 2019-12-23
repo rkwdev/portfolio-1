@@ -1,31 +1,16 @@
+// Page Loading Animation
 $(window).on('load', function () {
     $('.loader__img').fadeOut(500, function () {
         $('.loader').fadeOut(750);
     });
 });
+// End of Page Loading Animation
 
 $(document).ready(function () {
+    // Navigation
     $('.nav-button').click(function () {
         $('.nav-button').toggleClass('transform-x')
     })
-
-    $('#slides').superslides({
-        animation: 'fade',
-        animation_easing: 'linear',
-        play: 4000
-    });
-
-    // Typed effect
-    var typedText = $('.typed').attr('data-text');
-    var typedSeparated = typedText.split(',');
-    var typed = new Typed('.typed', {
-        strings: typedSeparated,
-        typeSpeed: 70,
-        loop: true,
-        startDelay: 1000,
-        showCursor: false
-    });
-
 
     $('.navbar-brand').click(smoothBodyScroll);
     $('.navbar-nav li a').click(smoothBodyScroll);
@@ -55,9 +40,31 @@ $(document).ready(function () {
             }
         })
     });
+    // End of Navigation
+
+    // Home Slider
+    $('#slides').superslides({
+        animation: 'fade',
+        animation_easing: 'linear',
+        play: 4000
+    });
+    // End of Home Slider
+
+    // Home Typed Effect
+    var typedText = $('.typed').attr('data-text');
+    var typedSeparated = typedText.split(',');
+    var typed = new Typed('.typed', {
+        strings: typedSeparated,
+        typeSpeed: 70,
+        loop: true,
+        startDelay: 1000,
+        showCursor: false
+    });
+    // End of Home Typed Effect
 })
 
 $(document).ready(function () {
+    // Skills Slider
     $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,
@@ -78,8 +85,9 @@ $(document).ready(function () {
             }
         }
     });
+    // End of Skills Slider
 
-
+    // Skills Pie Chart
     $(window).scroll(function () {
         var position = $(this).scrollTop();
         if (position >= 860) {
@@ -97,7 +105,9 @@ $(document).ready(function () {
             });
         }
     });
+    // End of Skills Pie Chart
 
+    // Works
     $(".controller li").click(function () {
         $(".controller li").removeClass("filter-active");
         $(this).addClass("filter-active");
@@ -106,10 +116,11 @@ $(document).ready(function () {
     $('.filter-container').filterizr({
         layout: 'sameWidth'
     });
+    // End of Works
 
 });
 
-
+// Testimonial
 $('.testimonials-section__carousel').owlCarousel({
     loop: true,
     // nav: true,
@@ -125,14 +136,15 @@ $('.testimonials-section__carousel').owlCarousel({
 
 var testimonialOwl = $('.testimonials-section__carousel');
 testimonialOwl.owlCarousel();
-// Go to the next item
+
 $('.testimonials-section__owl-next').click(function () {
     testimonialOwl.trigger('next.owl.carousel');
 });
-// Go to the previous item
+
 $('.testimonials-section__owl-prev').click(function () {
     testimonialOwl.trigger('prev.owl.carousel', [300]);
 });
+// End of Testimonial
 
 
 /* =====================================
@@ -142,9 +154,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var bodyOffset = $(this).scrollTop();
 
-        // var aboutTitleOffset = $('#about').offset().top - 500;
-
-        // About section
+        // About Animation
         if (bodyOffset >= 150) {
             $('#about .section-title').addClass('animate-heading');
         } else {
@@ -158,22 +168,25 @@ $(document).ready(function () {
             $('.about__detail').removeClass('move-from-right');
             $('.about__img').removeClass('move-from-left img-border-anim');
         }
+        // End of About Animation
 
-        // Skills section
+        // Skills Animation
         if (bodyOffset >= 930) {
             $('#skills .section-title').addClass('animate-heading');
         } else {
             $('#skills .section-title').removeClass('animate-heading');
         }
+        // End of Skills Animation
 
-        // Works section
+        // Works Animation
         if (bodyOffset >= 1550) {
             $('#works .section-title').addClass('animate-heading');
         } else {
             $('#works .section-title').removeClass('animate-heading');
         }
+        // End of Works Animation
 
-        // Price section
+        // Price Animation
         if (bodyOffset >= 2680) {
             $('#pricing .section-title').addClass('animate-heading');
             $('.card-1').addClass('move-from-left');
@@ -185,15 +198,17 @@ $(document).ready(function () {
             $('.card-2').removeClass('move-from-bottom');
             $('.card-3').removeClass('move-from-right');
         }
+        // End of Price Animation
 
-        // Testimonials section
+        // Testimonials Animation
         if (bodyOffset >= 3565) {
             $('#testimonials .section-title').addClass('animate-heading');
         } else {
             $('#testimonials .section-title').removeClass('animate-heading');
         }
+        // End of Testimonials Animation
 
-        // Contact section
+        // Contact Animation
         if (bodyOffset >= 4220) {
             $('#contact .section-title').addClass('animate-heading');
             $('#contact-card-1').addClass('move-from-left');
@@ -207,6 +222,7 @@ $(document).ready(function () {
             $('#contact-card-3').removeClass('move-from-right');
             $('#contact-form').removeClass('move-from-bottom');
         }
+        // End of Contact Animation
 
     });
 
@@ -241,7 +257,7 @@ $(document).ready(function () {
             message.fadeOut();
         }, 2000);
     }
-
+    // Form Submit
     form.submit(function (e) {
         e.preventDefault();
         form_data = $(this).serialize();

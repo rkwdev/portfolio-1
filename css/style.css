@@ -1,5 +1,32 @@
+/***********************************************
+Template Name: portfolioX - One Page Personal Portfolio Template
+Author URL: https://themeforest.net/user/rokun
+***********************************************/
+
 /* =====================================
-    Global CSS
+    Table of contents
+======================================== */
+/*
+    1. Global CSS
+    2. Animations
+    3. Navigation Menu
+    4. Slider
+    5. About
+    6. Skills
+    7. Works
+    8. Price
+    9. Testimonial
+    10. Contact
+    11. Footer
+    12. Media Queries
+*/
+/* =====================================
+    Table of contents end
+======================================== */
+
+
+/* =====================================
+    1. Global CSS
 ======================================== */
 html,
 body {
@@ -33,12 +60,122 @@ body {
 
 
 /* =====================================
-    Animations
+    2. Animations
 ======================================== */
+@-webkit-keyframes top-to-bottom {
+    0% {
+        top: -3px;
+        opacity: 0;
+    }
+    25% {
+        top: -3px;
+        opacity: .7;
+    }
+    50% {
+        top: 0;
+        opacity: .9;
+    }
+    75% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -2px;
+        opacity: 0;
+    }
+}
+
+@keyframes top-to-bottom {
+    0% {
+        top: -3px;
+        opacity: 0;
+    }
+    25% {
+        top: -3px;
+        opacity: .7;
+    }
+    50% {
+        top: 0;
+        opacity: .9;
+    }
+    75% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -2px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes glow {
+    0% {
+        -webkit-box-shadow: 1px 0 5px #22A7F0;
+                box-shadow: 1px 0 5px #22A7F0;
+    }
+    25% {
+        -webkit-box-shadow: 0px 0 8px #22A7F0;
+                box-shadow: 0px 0 8px #22A7F0;
+    }
+    50% {
+        -webkit-box-shadow: 0px 0 15px #22A7F0;
+                box-shadow: 0px 0 15px #22A7F0;
+    }
+    75% {
+        -webkit-box-shadow: 0px 0 8px #22A7F0;
+                box-shadow: 0px 0 8px #22A7F0;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0 5px #22A7F0;
+                box-shadow: 0px 0 5px #22A7F0;
+    }
+}
+
+@keyframes glow {
+    0% {
+        -webkit-box-shadow: 1px 0 5px #22A7F0;
+                box-shadow: 1px 0 5px #22A7F0;
+    }
+    25% {
+        -webkit-box-shadow: 0px 0 8px #22A7F0;
+                box-shadow: 0px 0 8px #22A7F0;
+    }
+    50% {
+        -webkit-box-shadow: 0px 0 15px #22A7F0;
+                box-shadow: 0px 0 15px #22A7F0;
+    }
+    75% {
+        -webkit-box-shadow: 0px 0 8px #22A7F0;
+                box-shadow: 0px 0 8px #22A7F0;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0 5px #22A7F0;
+                box-shadow: 0px 0 5px #22A7F0;
+    }
+}
+
 .animate-heading h1::before {
-    animation-name: animate-heading;
-    animation-fill-mode: forwards;
-    animation-duration: 800ms;
+    -webkit-animation-name: animate-heading;
+            animation-name: animate-heading;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+}
+
+@-webkit-keyframes animate-heading {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 8.2em;
+    }
+    75% {
+        width: 7.8em;
+    }
+    100% {
+        width: 8em;
+    }
 }
 
 @keyframes animate-heading {
@@ -57,78 +194,185 @@ body {
 }
 
 .move-from-right {
-    animation-name: move-from-right;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: move-from-right;
+            animation-name: move-from-right;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move-from-right {
+    0% {
+        -webkit-transform: translateX(60px);
+                transform: translateX(60px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes move-from-right {
     0% {
-        transform: translateX(60px);
+        -webkit-transform: translateX(60px);
+                transform: translateX(60px);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
         opacity: 1;
     }
 }
 
 .move-from-left {
-    animation-name: move-from-left;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: move-from-left;
+            animation-name: move-from-left;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move-from-left {
+    0% {
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes move-from-left {
     0% {
-        transform: translateX(-60px);
+        -webkit-transform: translateX(-60px);
+                transform: translateX(-60px);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
         opacity: 1;
     }
 }
 
 .move-from-bottom {
-    animation-name: move-from-bottom;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: move-from-bottom;
+            animation-name: move-from-bottom;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes move-from-bottom {
+    0% {
+        -webkit-transform: translateY(60px);
+                transform: translateY(60px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes move-from-bottom {
     0% {
-        transform: translateY(60px);
+        -webkit-transform: translateY(60px);
+                transform: translateY(60px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
         opacity: 1;
     }
 }
 
 .scale-down {
-    animation-name: scale-down;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: scale-down;
+            animation-name: scale-down;
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scale-down {
+    0% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes scale-down {
     0% {
-        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
         opacity: 0;
     }
     100% {
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
         opacity: 1;
     }
 }
 
 .img-border-anim::before {
-    animation-name: img-border-anim;
-    animation-duration: 800ms;
-    animation-delay: 1300ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: img-border-anim;
+            animation-name: img-border-anim;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-delay: 1300ms;
+            animation-delay: 1300ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes img-border-anim {
+    0% {
+        width: 0;
+        height: 0;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    50% {
+        width: 90%;
+        height: 100%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    75% {
+        width: 80%;
+        height: 89%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    100% {
+        width: 86%;
+        height: 94%;
+        border-color:#22A7F0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
 }
 
 @keyframes img-border-anim {
@@ -167,7 +411,7 @@ body {
 
 
 /* =====================================
-    Navigation Menu
+    3. Navigation Menu
 ======================================== */
 .nav-menu {
     background-color: rgba(0, 0, 0, .5);
@@ -180,12 +424,18 @@ body {
 }
 
 .navbar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     width: auto;
     height: 105px;
     text-align: center;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -234,6 +484,8 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     color: #eee;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
     transition: color .3s;
 }
 
@@ -247,6 +499,10 @@ body {
     color: #22A7F0;
 }
 
+.navbar-toggler {
+    outline: 5px auto #22A7F0;
+}
+
 .navbar-toggler:focus {
     outline-color: #22A7F0;
 }
@@ -254,17 +510,24 @@ body {
 .bar-1, .bar-2, .bar-3 {
     width: 23px;
     height: 3px;
+    display: block;
     margin: 5px;
     background: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
 .transform-x .bar-1 {
-    transform: rotate(-135deg) scaleX(1.15) translate(-6px, -5px);
+    -webkit-transform: rotate(-135deg) scaleX(1.15) translate(-6px, -5px);
+        -ms-transform: rotate(-135deg) scaleX(1.15) translate(-6px, -5px);
+            transform: rotate(-135deg) scaleX(1.15) translate(-6px, -5px);
 }
 
 .transform-x .bar-3 {
-    transform: rotate(135deg) scaleX(1.15) translate(-6px, 5px);
+    -webkit-transform: rotate(135deg) scaleX(1.15) translate(-6px, 5px);
+        -ms-transform: rotate(135deg) scaleX(1.15) translate(-6px, 5px);
+            transform: rotate(135deg) scaleX(1.15) translate(-6px, 5px);
 }
 
 .transform-x .bar-2 {
@@ -276,7 +539,8 @@ body {
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, .85);
-    box-shadow: 0px 0px 1px 0px rgba(34, 168, 240);
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(34, 168, 240);
+            box-shadow: 0px 0px 1px 0px rgba(34, 168, 240);
 }
 
 .custom-nav .navbar-brand {
@@ -288,12 +552,14 @@ body {
 
 
 /* =====================================
-    Slider
+    4. Slider
 ======================================== */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.6)), to(rgba(0,0,0,.5)));
+    background: -o-linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.5));
     background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.5));
     z-index: 3;
 }
@@ -306,7 +572,9 @@ body {
     right: 10%;
     width: 80%;
     text-align: right;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .slider-text .name {
@@ -327,6 +595,8 @@ body {
 }
 
 .slider-text .typed {
+    display: block;
+    font-size: 2rem;
     letter-spacing: 5px;
     min-height: 50px;
     font-weight: 400;
@@ -336,6 +606,8 @@ body {
 .btn--hire {
     font-weight: 500;
     letter-spacing: 1.5px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -347,6 +619,8 @@ body {
     opacity: 0.8;
     position: relative;
     top: 2px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 }
 
@@ -364,11 +638,13 @@ body {
 }
 
 .social-icons .fab:hover {
-    box-shadow: 0 0px 10px rgba(255, 255, 255, .7);
+    -webkit-box-shadow: 0 0px 10px rgba(255, 255, 255, .7);
+            box-shadow: 0 0px 10px rgba(255, 255, 255, .7);
 }
 
 .social-icons .fab:focus {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .slides-pagination {
@@ -376,7 +652,9 @@ body {
     top: 50%;
     left: 30px;
     width: auto;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     bottom: auto;
     padding: 0;
 }
@@ -386,7 +664,8 @@ body {
     color: transparent;
     margin: 14px 0;
     display: block;
-    box-shadow: 0 0 4px 1px rgba(34, 167, 240, 1);
+    -webkit-box-shadow: 0 0 4px 1px rgba(34, 167, 240, 1);
+            box-shadow: 0 0 4px 1px rgba(34, 167, 240, 1);
 }
 
 .slides-pagination a.current {
@@ -399,7 +678,7 @@ body {
 
 
 /* =====================================
-    About
+    5. About
 ======================================== */
 .section-title h1 {
     font-weight: 400;
@@ -415,7 +694,9 @@ body {
     width: 0;
     height: .15em;
     border-radius: 20px;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .section-title__text {
@@ -441,8 +722,9 @@ body {
 }
 
 .about__img img {
-    max-width: 100%;
-    box-shadow: 0 0 0px 10px rgba(34, 168, 240, 0.03);
+    width: 100%;
+    -webkit-box-shadow: 0 0 0px 10px rgba(34, 168, 240, 0.03);
+            box-shadow: 0 0 0px 10px rgba(34, 168, 240, 0.03);
 }
 
 .about__detail {
@@ -470,75 +752,43 @@ body {
 .about__detail-links .btn--download {
     background-color: #22A7F0;
     color: #fff;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
-    animation: glow 1.8s linear infinite;
+    -webkit-animation: glow 1.8s linear infinite;
+            animation: glow 1.8s linear infinite;
 }
 
 .about__detail-links .btn--download i.fa {
     font-size: 13px !important;
-    animation: top-to-bottom 1.8s linear infinite;
-    animation-fill-mode: forwards;
+    -webkit-animation: top-to-bottom 1.8s linear infinite;
+            animation: top-to-bottom 1.8s linear infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     animation-direction: reverse;
     position: relative;
     padding-left: 3px;
     opacity: 0;
 }
 
-@keyframes top-to-bottom {
-    0% {
-        top: -3px;
-        opacity: 0;
-    }
-    25% {
-        top: -3px;
-        opacity: .7;
-    }
-    50% {
-        top: 0;
-        opacity: .9;
-    }
-    75% {
-        top: 0;
-        opacity: 1;
-    }
-    100% {
-        top: -2px;
-        opacity: 0;
-    }
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 1px 0 5px #22A7F0;
-    }
-    25% {
-        box-shadow: 0px 0 8px #22A7F0;
-    }
-    50% {
-        box-shadow: 0px 0 15px #22A7F0;
-    }
-    75% {
-        box-shadow: 0px 0 8px #22A7F0;
-    }
-    100% {
-        box-shadow: 0px 0 5px #22A7F0;
-    }
-}
-
 .about__detail-links .btn--download:hover {
     background-color: #0d8ed3;
     color: #fff;
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
 }
 
 .about__detail-links .btn--download:hover i.fa {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
     opacity: 1;
 }
 
 .about__detail-links .btn--hire {
     border-color: #22A7F0;
     color: #22A7F0;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
 }
 
@@ -552,7 +802,7 @@ body {
 
 
 /* =====================================
-    Skills
+    6. Skills
 ======================================== */
 .skills-section {
     background-color: #0a3d62;
@@ -572,10 +822,12 @@ body {
 }
 
 .skills-section .owl-carousel {
+    cursor: -webkit-grab;
     cursor: grab;
 }
 
 .skills-section .owl-carousel:active {
+    cursor: -webkit-grabbing;
     cursor: grabbing;
 }
 
@@ -618,7 +870,7 @@ body {
 
 
 /* =====================================
-    Works
+    7. Works
 ======================================== */
 .works-section__filter ul {
     list-style: none;
@@ -634,6 +886,8 @@ body {
     border-radius: 3px;
     padding: .25em .7em;
     margin: 0 .5em;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
     transition: all 300ms;
 }
 
@@ -661,7 +915,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 3;
 }
 
@@ -671,6 +927,8 @@ body {
     padding: .25em .5em;
     margin: 0 .25em;
     position: relative;
+    -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
 }
 
@@ -691,6 +949,8 @@ body {
     left: 0;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
+    -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
 }
 
@@ -725,10 +985,20 @@ body {
 
 
 /* =====================================
-    Price
+    8. Price
 ======================================== */
 .price-section {
     background: #f8f9fa;
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(255, 255, 255, 0.9)),
+        to(rgba(255, 255, 255, 0.8))),
+        url('../images/pricing-bg.jpg') no-repeat center center / cover;
+    background: -o-linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.8)),
+        url('../images/pricing-bg.jpg') no-repeat center center / cover;
     background: linear-gradient(
         rgba(255, 255, 255, 0.9),
         rgba(255, 255, 255, 0.8)),
@@ -743,11 +1013,22 @@ body {
 .card-2,
 .card-3 {
     background: rgba(34, 168, 240, 0.9);
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(34, 168, 240, 0.6)),
+        to(rgba(34, 168, 240, 0.5))),
+        url('../images/pricing-card-bg.jpg') no-repeat center center / cover;
+    background: -o-linear-gradient(
+        rgba(34, 168, 240, 0.6),
+        rgba(34, 168, 240, 0.5)),
+        url('../images/pricing-card-bg.jpg') no-repeat center center / cover;
     background: linear-gradient(
         rgba(34, 168, 240, 0.6),
         rgba(34, 168, 240, 0.5)),
         url('../images/pricing-card-bg.jpg') no-repeat center center / cover;
-    box-shadow: 7px 18px 50px #555;
+    -webkit-box-shadow: 7px 18px 50px #555;
+            box-shadow: 7px 18px 50px #555;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     opacity: 0;
@@ -766,13 +1047,18 @@ body {
 .price-section .btn--hire {
     border-radius: 25px;
     width: 150px;
-    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
     text-shadow: none;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 .price-section .btn--hire:hover {
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+    -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
 }
 /* =====================================
     End of Price
@@ -780,7 +1066,7 @@ body {
 
 
 /* =====================================
-    Testimonial
+    9. Testimonial
 ======================================== */
 .testimonials-section {
     background-color: rgba(0, 0, 0, 0.1);
@@ -804,7 +1090,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    transform: skew(0, -25deg);
+    -webkit-transform: skew(0, -25deg);
+        -ms-transform: skew(0, -25deg);
+            transform: skew(0, -25deg);
 }
 
 .testimonials-section__owl-nav {
@@ -820,6 +1108,8 @@ body {
     outline: none;
     font-size: 1.5rem;
     cursor: pointer;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
 
@@ -830,12 +1120,16 @@ body {
 
 .testimonials-section__owl-prev {
     float: left;
-    transform: translateX(-125px);
+    -webkit-transform: translateX(-125px);
+        -ms-transform: translateX(-125px);
+            transform: translateX(-125px);
 }
 
 .testimonials-section__owl-next {
     float: right;
-    transform: translateX(125px);
+    -webkit-transform: translateX(125px);
+        -ms-transform: translateX(125px);
+            transform: translateX(125px);
 }
 /* =====================================
     End of Testimonial
@@ -843,10 +1137,16 @@ body {
 
 
 /* =====================================
-    Contact
+    10. Contact
 ======================================== */
 .contact {
+    background: -o-linear-gradient(340deg,rgba(10, 61, 98, 0.98) 55%,rgba(34, 168, 240, 0.6) 45%);
     background: linear-gradient(110deg,rgba(10, 61, 98, 0.98) 55%,rgba(34, 168, 240, 0.6) 45%);
+    background: -o-linear-gradient(
+    340deg,
+    rgba(10, 61, 98, 0.98) 55%,
+    rgba(34, 168, 240, 0.6) 45%),
+    url('../images/contact-bg.jpg') no-repeat center center / cover;
     background: linear-gradient(
     110deg,
     rgba(10, 61, 98, 0.98) 55%,
@@ -866,12 +1166,15 @@ body {
 .contact__input {
     background: transparent;
     color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
 
 .contact__input:focus {
     background: transparent;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: #fff;
     border: 1px solid #22A7F0;
 }
@@ -882,6 +1185,8 @@ body {
     margin-top: -70px;
     margin-left: 4px;
     font-size: .875rem;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
 
@@ -890,12 +1195,16 @@ body {
 }
 
 .contact__input:placeholder-shown + .contact__label {
-    transform: translate(20px, 20px);
+    -webkit-transform: translate(20px, 20px);
+        -ms-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
     opacity: 0;
     visibility: hidden;
 }
 
 .btn--contact {
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
     margin-top: 11rem;
 }
@@ -907,11 +1216,22 @@ body {
 
 .contact .card {
     background: rgba(10, 61, 98, 0.8);
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(10, 61, 98, 0.8)),
+        to(rgba(10, 61, 98, 0.9))),
+        url('../images/contact-card-bg.jpg') no-repeat center bottom / cover;
+    background: -o-linear-gradient(
+        rgba(10, 61, 98, 0.8),
+        rgba(10, 61, 98, 0.9)),
+        url('../images/contact-card-bg.jpg') no-repeat center bottom / cover;
     background: linear-gradient(
         rgba(10, 61, 98, 0.8),
         rgba(10, 61, 98, 0.9)),
         url('../images/contact-card-bg.jpg') no-repeat center bottom / cover;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     color: #fff;
@@ -926,17 +1246,39 @@ body {
 #contact-form {
     opacity: 0;
 }
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 473px;
+    width: 100%;
+    opacity: .8;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 473px;
+    width: 100%;
+}
+
+#gmap_canvas {
+    width: 100%;
+    height: 473px;
+    border: none;
+}
 /* =====================================
     End of Contact
 ======================================== */
 
 
 /* =====================================
-    Footer
+    11. Footer
 ======================================== */
 .footer {
     background-color: #333;
-    box-shadow: 0 0px 2px 0px rgba(255,255,255,.4);
+    -webkit-box-shadow: 0 0px 2px 0px rgba(255,255,255,.4);
+            box-shadow: 0 0px 2px 0px rgba(255,255,255,.4);
     color: #fff;
     font-weight: 400;
     letter-spacing: .5px;
@@ -949,7 +1291,7 @@ body {
 
 
 /* =====================================
-    Media Queries
+    12. Media Queries
 ======================================== */
 
 /* ===== Max width "991px" ===== */
@@ -963,7 +1305,9 @@ body {
         position: absolute;
         right: 10px;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 
     .nav-wrapper {
@@ -977,6 +1321,8 @@ body {
         padding: 40px 0 20px 0;
         border-bottom: 4px solid rgba(0, 0, 0, .85);
         z-index: -1;
+        -webkit-transition: all .1s;
+        -o-transition: all .1s;
         transition: all .1s;
     }
     /* End of Navigation */
@@ -996,7 +1342,13 @@ body {
 
     /* Contact */
     .contact {
+        background: -o-linear-gradient(340deg,rgba(10, 61, 98, 0.98) 55%,rgba(10, 61, 98, 0.7) 45%);
         background: linear-gradient(110deg,rgba(10, 61, 98, 0.98) 55%,rgba(10, 61, 98, 0.7) 45%);
+        background: -o-linear-gradient(
+        340deg,
+        rgba(10, 61, 98, 0.98) 55%,
+        rgba(10, 61, 98, 0.7) 45%),
+        url('../images/2.jpg') no-repeat center center / cover;
         background: linear-gradient(
         110deg,
         rgba(10, 61, 98, 0.98) 55%,
@@ -1016,11 +1368,15 @@ body {
     }
 
     .testimonials-section__owl-prev {
-        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+            -ms-transform: translateX(-50px);
+                transform: translateX(-50px);
     }
 
     .testimonials-section__owl-next {
-        transform: translateX(50px);
+        -webkit-transform: translateX(50px);
+            -ms-transform: translateX(50px);
+                transform: translateX(50px);
     }
     /* End of Testimonial */
 }
@@ -1073,7 +1429,9 @@ body {
 
     .slider-text .name:after {
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 
     .slider-text .typed {
@@ -1146,11 +1504,15 @@ body {
     }
 
     .transform-x .bar-1 {
-        transform: rotate(-135deg) scaleX(1.15) translate(-5px, -5px);
+        -webkit-transform: rotate(-133deg) scaleX(1.15) translate(-4.5px, -5px);
+            -ms-transform: rotate(-133deg) scaleX(1.15) translate(-4.5px, -5px);
+                transform: rotate(-133deg) scaleX(1.15) translate(-4.5px, -5px);
     }
 
     .transform-x .bar-3 {
-        transform: rotate(135deg) scaleX(1.15) translate(-5px, 5px);
+        -webkit-transform: rotate(136deg) scaleX(1.15) translate(-4.4px, 5px);
+            -ms-transform: rotate(136deg) scaleX(1.15) translate(-4.4px, 5px);
+                transform: rotate(136deg) scaleX(1.15) translate(-4.4px, 5px);
     }
     /* End of Navigation */
 
@@ -1161,10 +1523,6 @@ body {
 
     .section-title__text {
         padding: 0 14px;
-    }
-
-    .section-title h1::before {
-        width: 7em;
     }
 
     .about__detail-links {
@@ -1189,11 +1547,15 @@ body {
     
     /* Testimonial */
     .testimonials-section__owl-prev {
-        transform: translateX(-40px);
+        -webkit-transform: translateX(-40px);
+            -ms-transform: translateX(-40px);
+                transform: translateX(-40px);
     }
 
     .testimonials-section__owl-next {
-        transform: translateX(40px);
+        -webkit-transform: translateX(40px);
+            -ms-transform: translateX(40px);
+                transform: translateX(40px);
     }
     /* End of Testimonial */
 }

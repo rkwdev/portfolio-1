@@ -16,7 +16,7 @@
     <!-- End of Fav Icon -->
 
     <!-- Website Title -->
-    <title>Personal Portfolio</title>
+    <title>portfolioX - One Page Personal Portfolio Template</title>
     <!-- End of Website Title -->
 
     <!-- All Style Files -->
@@ -65,14 +65,14 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a href="#home" class="navbar-brand text-light text-uppercase">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="images/logo.png" alt="Logo">
                 </a>
                 <!-- End of Logo -->
 
                 <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
-                    <div class="bar-1"></div>
-                    <div class="bar-2"></div>
-                    <div class="bar-3"></div>
+                    <span class="bar-1"></span>
+                    <span class="bar-2"></span>
+                    <span class="bar-3"></span>
                 </button>
 
                 <div class="collapse navbar-collapse nav-wrapper" id="myNavbar">
@@ -129,11 +129,11 @@
             <!-- End of Home Name -->
 
             <!-- Home Typed Effect Text -->
-            <h2 class="typed" data-text="
+            <span class="typed" data-text="
                 Frontend Developer,
                 WordPress Developer,
                 UI/UX Expert
-            "></h2>
+            "></span>
             <!-- End of Home Typed Effect Text -->
 
             <!-- Hire Me Button -->
@@ -851,25 +851,25 @@
                         </div>
 
                         <div class="form-group pb-4">
-                            <input name="name" type="text" class="form-control my-2 p-3 contact__input"
+                            <input name="name" id="name" type="text" class="form-control my-2 p-3 contact__input"
                                 placeholder="Your Name" required>
                             <label for="name" class="contact__label">Your Name</label>
                         </div>
 
                         <div class="form-group py-4">
-                            <input name="email" type="email" class="form-control my-2 p-3 contact__input"
+                            <input name="email" id="email" type="email" class="form-control my-2 p-3 contact__input"
                                 placeholder="Your Email" required>
                             <label for="email" class="contact__label">Your Email</label>
                         </div>
 
                         <div class="form-group py-4">
-                            <input name="subject" type="text" class="form-control my-2 p-3 contact__input"
+                            <input name="subject" id="subject" type="text" class="form-control my-2 p-3 contact__input"
                                 placeholder="Subject" required>
-                            <label for="email" class="contact__label">Subject</label>
+                            <label for="subject" class="contact__label">Subject</label>
                         </div>
 
                         <div class="form-group py-4">
-                            <textarea name="message" rows="6" class="form-control my-2 p-3 contact__input"
+                            <textarea name="message" id="message" rows="6" class="form-control my-2 p-3 contact__input"
                                 placeholder="Your Message" required></textarea>
                             <label for="message" class="contact__label contact__label--textarea">Your Message</label>
                         </div>
@@ -886,26 +886,9 @@
                 <div class="col-lg-6 pl-lg-4 mt-lg-2 mt-5">
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe width="100%" height="473" id="gmap_canvas"
-                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <iframe id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                         </div>
-                        <style>
-                            .mapouter {
-                                position: relative;
-                                text-align: right;
-                                height: 473px;
-                                width: 100%;
-                                opacity: .8;
-                            }
-
-                            .gmap_canvas {
-                                overflow: hidden;
-                                background: none !important;
-                                height: 473px;
-                                width: 100%;
-                            }
-                        </style>
                     </div>
                 </div>
                 <!-- End of Google map -->
@@ -928,7 +911,7 @@
         <div class="container">
             <div class="row">
                 <div class="col pt-3">
-                    <p>All Rights Reserved. Copyright &copy; 2019</p>
+                    <p>Copyright &copy; 2019. Developed by Rokun</p>
                 </div>
             </div>
         </div>
